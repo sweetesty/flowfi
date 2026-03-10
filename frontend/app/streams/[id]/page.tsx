@@ -1,7 +1,7 @@
 
 import { notFound } from "next/navigation";
-import LiveCounter from "@/components/LiveCounter";
-import ProgressBar from "@/components/ProgressBar";
+import LiveCounter from "@/components/Livecounter";
+import ProgressBar from "@/components/Progressbar";
 
 
 interface Transaction {
