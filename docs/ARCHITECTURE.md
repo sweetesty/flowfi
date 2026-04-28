@@ -2,6 +2,14 @@
 
 This document provides a high-level overview of how FlowFi's components interact and how the system processes on-chain events.
 
+```mermaid
+flowchart LR
+       Contract[Stream Contract (Soroban WASM)] --> Indexer[Soroban Event Indexer]\n  Indexer --> DB[(Postgres DB)]
+       DB --> API[Backend API (Express + SSE)]
+       API --> UI[Frontend (Next.js)]
+       UI --> API
+```
+
 ## System Components
 
 FlowFi consists of three main components:
