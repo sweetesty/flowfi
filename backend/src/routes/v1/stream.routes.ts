@@ -11,6 +11,8 @@ import {
   withdrawStream,
 } from '../../controllers/stream.controller.js';
 import { requireAuth } from '../../middleware/auth.js';
+import { authMiddleware } from '../../middleware/auth.middleware.js';
+import { streamCreationRateLimiter } from '../../middleware/stream-rate-limiter.middleware.js';
 
 const router = Router();
 
